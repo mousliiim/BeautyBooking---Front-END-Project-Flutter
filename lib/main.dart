@@ -187,15 +187,15 @@ class ArtisteSection extends StatelessWidget {
       'title': 'Ines Beauty',
       'Ville': 'Paris 15eme',
       'Distance': 2,
-      'Note': 36,
+      'Note': 24,
       'Photo': 'images/inesbeauty.png',
       'Prix': '40'
     },
     {
       'title': 'Elle Marmoutier',
       'Ville': 'Melun',
-      'Distance': 4,
-      'Note': 76,
+      'Distance': 48,
+      'Note': 43,
       'Photo': 'images/beauty2.jpg',
       'Prix': '70'
     },
@@ -259,7 +259,7 @@ class ArtisteCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10),
-      height: 230,
+      height: 245,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -324,6 +324,95 @@ class ArtisteCard extends StatelessWidget {
                   '\€' + artisteData['Prix'],
                   style: GoogleFonts.poppins(
                     fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  artisteData['Ville'],
+                  style: GoogleFonts.poppins(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.place,
+                      color: d_cottoncolor,
+                      size: 17,
+                    ),
+                    Text(
+                      artisteData['Distance'].toString() + ' Km de vous',
+                      style: GoogleFonts.poppins(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                Text(
+                  'Certifié BeautyBook',
+                  style: GoogleFonts.poppins(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                Icon(
+                  Icons.check_circle,
+                  color: d_cottoncolor,
+                  size: 20,
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(10, 3, 10, 0),
+            child: Row(
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      Icons.star_rate,
+                      color: d_cottoncolor,
+                      size: 19,
+                    ),
+                    Icon(
+                      Icons.star_rate,
+                      color: d_cottoncolor,
+                      size: 19,
+                    ),
+                    Icon(
+                      Icons.star_rate,
+                      color: d_cottoncolor,
+                      size: 19,
+                    ),
+                    Icon(
+                      Icons.star_rate,
+                      color: d_cottoncolor,
+                      size: 19,
+                    ),
+                    Icon(
+                      Icons.star_border,
+                      color: d_cottoncolor,
+                      size: 19,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                Text(
+                  artisteData['Note'].toString() + ' Notes',
+                  style: GoogleFonts.poppins(
+                    fontSize: 13,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
